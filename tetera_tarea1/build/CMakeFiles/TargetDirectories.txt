@@ -1,0 +1,1 @@
+/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/tetera_tarea1/build/CMakeFiles/hello.dir
