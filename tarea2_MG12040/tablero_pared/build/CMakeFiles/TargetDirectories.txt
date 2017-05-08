@@ -1,0 +1,1 @@
+/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/tarea2_MG12040/tablero_pared/build/CMakeFiles/hello.dir
