@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/pelota_rebota/main.cpp
+GL/gl.h
+-
+GL/glut.h
+-
+stdio.h
+-
+
