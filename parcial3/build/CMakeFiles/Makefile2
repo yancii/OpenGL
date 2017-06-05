@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial_3"
+CMAKE_SOURCE_DIR = "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial_3/build"
+CMAKE_BINARY_DIR = "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build"
 
 #=============================================================================
 # Target rules for target CMakeFiles/hello.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial
 CMakeFiles/hello.dir/all:
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/depend
 	$(MAKE) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial_3/build/CMakeFiles"  1
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build/CMakeFiles"  1
 	@echo "Built target hello"
 .PHONY : CMakeFiles/hello.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/hello.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hello.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial_3/build/CMakeFiles" 1
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build/CMakeFiles" 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/hello.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial_3/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build/CMakeFiles" 0
 .PHONY : CMakeFiles/hello.dir/rule
 
 # Convenience name for target.

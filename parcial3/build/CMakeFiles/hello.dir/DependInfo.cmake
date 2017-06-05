@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial_3/main.cpp" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial_3/build/CMakeFiles/hello.dir/main.cpp.o"
+  "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/main.cpp" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build/CMakeFiles/hello.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
