@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3"
+CMAKE_SOURCE_DIR = "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/build"
+CMAKE_BINARY_DIR = "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hello.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/hello.dir/flags.make
 
 CMakeFiles/hello.dir/main.cpp.o: CMakeFiles/hello.dir/flags.make
 CMakeFiles/hello.dir/main.cpp.o: ../main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/build/CMakeFiles" $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build/CMakeFiles" $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/hello.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/main.cpp.o -c "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/main.cpp"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/main.cpp.o -c "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/main.cpp"
 
 CMakeFiles/hello.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/main.cpp" > CMakeFiles/hello.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/main.cpp" > CMakeFiles/hello.dir/main.cpp.i
 
 CMakeFiles/hello.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/main.cpp" -o CMakeFiles/hello.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/main.cpp" -o CMakeFiles/hello.dir/main.cpp.s
 
 CMakeFiles/hello.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/hello.dir/main.cpp.o.requires
@@ -106,6 +106,6 @@ CMakeFiles/hello.dir/clean:
 .PHONY : CMakeFiles/hello.dir/clean
 
 CMakeFiles/hello.dir/depend:
-	cd "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/build" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/build" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/build/CMakeFiles/hello.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build" "/home/yanci/Documentos/ALGORITMOS GRAFICOS/proyectos/parcial3/build/CMakeFiles/hello.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/hello.dir/depend
 

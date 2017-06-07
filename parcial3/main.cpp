@@ -54,9 +54,9 @@ void display(void)
 {
 	
 	GLfloat mat_ambient[] = { 0.0, 0.0, 0.0 };
-	GLfloat mat_diffuse[] = { 0.55, 0.55, 0.55 };
-	GLfloat mat_specular[] = { 0.70, 0.70, 0.70};
-	GLfloat shine[] = {30.8974f};
+	GLfloat mat_diffuse[] = { 0.5, 0.0, 0.0 };
+	GLfloat mat_specular[] = { 0.7, 0.6, 0.6};
+	GLfloat shine[] = {15};
    //  Borrar pantalla y Z-buffer
     glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
      glLoadIdentity();
