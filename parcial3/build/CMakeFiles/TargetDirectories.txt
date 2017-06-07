@@ -1,1 +1,0 @@
-/home/yanci/Documentos/ALGORITMOS GRAFICOS/TAREA_COMPUTO2/parcial3/build/CMakeFiles/hello.dir
