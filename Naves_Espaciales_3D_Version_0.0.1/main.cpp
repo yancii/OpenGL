@@ -5,6 +5,38 @@
 #include <SOIL/SOIL.h>//Libreria para el uso de Texturas
 #include <stdlib.h>
 #include <cstdio>
+#include <SDL/SDL.h>
+//Llamndo el archivo de sonido
+#define MUS_PATH "run.wav"
+
+//Prototipo de nuestra devolución de llamada de audio
+// Ver la implementación para más información
+void my_audio_callback(void *userdata, Uint8 *stream, int len);
+
+// Declaraciones de variables
+static Uint8 *audio_pos; // Puntero global al búfer de audio que se va a reproducir
+static Uint64 audio_len; // Longitud restante de la muestra que tenemos que jugar
+
+
+
+//Función de devolución de llamada de audio
+//Aquí tiene que copiar los datos de su buffer de audio en el
+// Solicitud de búfer de audio (secuencia)
+//Sólo debe copiar tanto como la longitud solicitada (len)
+void my_audio_callback(void *userdata, Uint8 *stream, int len) 
+{
+
+	if (audio_len ==0)
+		return;
+
+	len = ( len > audio_len ? audio_len : len );
+	//SDL_memcpy (stream, audio_pos, len); 					// Simplemente copie desde un buffer en el otro
+	SDL_MixAudio(stream, audio_pos, len, SDL_MIX_MAXVOLUME);// Mezclar de un buffer a otro
+
+	audio_pos += len ;
+	audio_len -= len ;
+}
+
 
 using namespace std;
 int animating = 0;      // 0 sin animación 
@@ -380,6 +412,7 @@ void display() {
 
     glClearColor(0.0, 0.0, 0.0, 0.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
   glLoadIdentity();
   // Configurando camara
   gluLookAt(	X1=X+3, Y, Z1=Z+20,
@@ -871,6 +904,8 @@ glBindTexture(GL_TEXTURE_2D, texture[1]);
      //Desactivando Materiales
     glDisable(GL_LIGHTING);
     glDisable(GL_LIGHT0);
+    /* Empezar a jugar */
+	SDL_PauseAudio(0);
     glFlush ();
     glutSwapBuffers();    
 }
@@ -1432,17 +1467,47 @@ void special(int key, int x, int y) {
 // ----------------------  Funcion principal ------------------
 
 int main(int argc, char** argv) {
+    
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
-    glutInitWindowSize(500,500);
-    glutInitWindowPosition(100,100);
-    glutCreateWindow("Videojuego de Naves Espaciales 3D version 0.0.1");
+    glutInitWindowSize(800,800);
+    glutInitWindowPosition(250,100);
+    glutCreateWindow("VideoJuego de Naves Espaciales 3D version 0.0.1");
     glutDisplayFunc(display);
     glutReshapeFunc(camara);
     glutKeyboardFunc(key);
     glutSpecialFunc(special);
     glEnable(GL_DEPTH_TEST);
+    // Inicializar SDL.
+	if (SDL_Init(SDL_INIT_AUDIO) < 0)
+			return 1;
 
+	// Variables locales
+	static Uint32 wav_length; // Longitud de nuestra muestra
+	static Uint8 *wav_buffer; // Buffer que contiene nuestro archivo de audio
+	static SDL_AudioSpec wav_spec; // Las especificaciones de nuestra pieza de música
+
+
+	/* Cargar el WAV */
+	// Las especificaciones, la longitud y el búfer de nuestro wav se llenan
+	if( SDL_LoadWAV(MUS_PATH, &wav_spec, &wav_buffer, &wav_length) == NULL )
+	{
+	  return 1;
+    }
+	// Establecer la función de devolución de llamada
+	wav_spec.callback = my_audio_callback;
+	wav_spec.userdata = NULL;
+	
+	// Establecer nuestras variables estáticas globales
+	audio_pos = wav_buffer ; // Copia el buffer de sonido
+	audio_len = wav_length; // Copia la longitud del archivo
+
+	/*Abrir el dispositivo de audio */
+	if ( SDL_OpenAudio(&wav_spec, NULL) < 0 )
+	{
+	  fprintf(stderr, "No se pudo abrir el audio: %s\n", SDL_GetError());
+	  exit(-1);
+	}
     frameNumber = 0;
     rotateX = rotateY1 = 0;
     
@@ -1456,6 +1521,9 @@ int main(int argc, char** argv) {
     startAnimation();
 
     glutMainLoop();
+  	// Cerrar todo
+	SDL_CloseAudio();
+	SDL_FreeWAV(wav_buffer);  
     return 0;
 }
 
