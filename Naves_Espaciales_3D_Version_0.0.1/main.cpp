@@ -192,44 +192,53 @@ void text()
     char text[62];
     char text2[60];
     char text3[32];
-     if(n!=15){//***
-    if(animating==1){
-        sprintf(text, "Enemigos : %d",n);
-        glColor3f(1.0, 1.000, 1.000);
-        glRasterPos3f( X-2.5 , Y+8.5 , Z+5);
-        for(int i = 0; text[i] != '\0'; i++){
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+    if(n!=15)
+    {//***
+        if(animating==1)
+        {
+            sprintf(text, "Enemigos : %d",n);
+            glColor3f(1.0, 1.000, 1.000);
+            glRasterPos3f( X-2.5 , Y+8.5 , Z+5);
+            for(int i = 0; text[i] != '\0'; i++)
+            {
+                glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
             }  
-        sprintf(text2, "A:Retroceder D:Adelantar W:Subir S:Bajar");
-        glColor3f(1.0, 1.000, 1.000);
-        glRasterPos3f( X-2.1 , Y+9.4 , Z+6);
-        for(int i = 0; text2[i] != '\0'; i++){
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text2[i]);
+            sprintf(text2, "A:Retroceder D:Adelantar W:Subir S:Bajar");
+            glColor3f(1.0, 1.000, 1.000);
+            glRasterPos3f( X-2.1 , Y+9.4 , Z+6);
+            for(int i = 0; text2[i] != '\0'; i++)
+            {
+                glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text2[i]);
             }
-        sprintf(text3, "X:Acercar E:Disparar Z:Alejar");
-        glColor3f(1.0, 1.000, 1.000);
-        glRasterPos3f( X-2.1 , Y+8.8 , Z+6);
-        for(int i = 0; text3[i] != '\0'; i++){
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text3[i]);
+            sprintf(text3, "X:Acercar E:Disparar Z:Alejar");
+            glColor3f(1.0, 1.000, 1.000);
+            glRasterPos3f( X-2.1 , Y+8.8 , Z+6);
+            for(int i = 0; text3[i] != '\0'; i++)
+            {
+                glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text3[i]);
             }
        
-    }
-    else{
-        sprintf(text, "Has perdido ! Pulse la barra de espacio para iniciar");
-        glColor3f(1.000, 1.0, 1.000);
-        glRasterPos3f( X-1 , Y+5.0 , Z+5);
-        for(int i = 0; text[i] != '\0'; i++){
-            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
+        }
+        else
+        {
+            sprintf(text, "Has perdido ! Pulse la barra de espacio para iniciar");
+            glColor3f(1.000, 1.0, 1.000);
+            glRasterPos3f( X-1 , Y+5.0 , Z+5);
+            for(int i = 0; text[i] != '\0'; i++)
+            {
+                glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);
             }
-    }
-   }//***
-    else{//***
-            sprintf(text, "Mision Completada!!!Gracias por jugar, presione esq para salir");//***
-    glColor3f(1.000, 1.0, 1.000);//***
-    glRasterPos3f( X+1 , Y+2.0 , Z+5);//***
-    for(int i = 0; text[i] != '\0'; i++){//**
-        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);}//***
-       }//***
+        }
+    }//***
+    else
+    {//***
+        sprintf(text, "Mision Completada!!!Gracias por jugar, presione esq para salir");//***
+        glColor3f(1.000, 1.0, 1.000);//***
+        glRasterPos3f( X+1 , Y+2.0 , Z+5);//***
+        for(int i = 0; text[i] != '\0'; i++)
+        {//**
+            glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, text[i]);}//***
+        }//***
 }
 
 void ColorAlpha(float c1,float c2,float c3, float c4)
