@@ -10,7 +10,7 @@ nave3d.cpp -o nave3d -lGL -lGLU -lglut -lSOIL -lSDL
 
 ./nave3d
 
-Teclas para la manipulacion del video juego
+Teclas para la manipulacion del videojuego
 
 Para los movimientos arriba,abajo,izquierda y derecha teclas de 
 direcciones del teclado.
@@ -40,6 +40,8 @@ La carpeta ProyectoVideojuego incluye:
 Por algun error 
 Proyecto completo en el siguiente enlace:
 https://github.com/fercastle/OpenGL.git
+https://github.com/yancii/OpenGL.git
+
 
 
 
