@@ -1,0 +1,46 @@
+Algoritmos graficos 
+
+Luis Fernando Hernandez Castillo	HC12012
+Maria Yanci Martinez Garcia 		MG12040
+Duglas Enrique Diaz Barahona		DB12001
+
+Linea para ejecutar el videojuego Naves espaciales 3D version 0.0.1
+
+nave3d.cpp -o nave3d -lGL -lGLU -lglut -lSOIL -lSDL 
+
+./nave3d
+
+Teclas para la manipulacion del video juego
+
+Para los movimientos arriba,abajo,izquierda y derecha teclas de 
+direcciones del teclado.
+
+Para acercar 
+tecla x
+
+Para alejar 
+tecla z
+
+Para disparo
+tecla d
+
+La carpeta ProyectoVideojuego incluye:
+	*Readme
+	*Documeto pdf llamado:
+		-Reporte de algoritmosfinal
+	*Carpeta del videojuego Naves_Espacial_3D_version_0.0.1 incluye:
+		-4 Imagenes jpg:
+			Fondo,Suelo,Pavimento y Ventana
+		-Archivo cpp llamado:
+			nave3d
+		-Audio en wav llamado:
+			juego
+	
+
+Por algun error 
+Proyecto completo en el siguiente enlace:
+https://github.com/fercastle/OpenGL.git
+
+
+
+
